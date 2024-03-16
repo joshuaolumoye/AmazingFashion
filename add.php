@@ -5,7 +5,7 @@ if(isset($_POST['submit'])){
    $p_name=$_POST['pName'];
    $p_price=$_POST['pPrice'];
 
-   $terget_dir ="image";
+   $terget_dir ="image/";
    $target_file = $target_dir.basename($_FILES['pImage']["name"]);
    move_uploaded_file($_FILES['pImage']['tmp_name'],$target_file);
 

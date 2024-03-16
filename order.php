@@ -32,17 +32,46 @@ else{
 </head>
 <body>
     
-    <div class="container">
+    <div class="container-lg">
         <div class="row justify-content-center">
-         <div class="col-md-10 mb-5">
+         <div class="col-md-7 col-sm-3 mb-5">
           <h2 class="text-center p-2 text-primary">fill the details to complete your order</h2>
-          <h2 class="text-center p-2 text-danger"><?=$notFound; ?></h2>
+          <h2 class="text-center p-2 text-danger"></h2>
           <h3>Product details:</h3>
-          <table class="table table-bordered" width="500px">
+          <table class="table table-bordered" width="100px">
            <tr>
             <th>product name:</th>
             <td><?=$pName; ?></td>
-            <td rowspan="4" class="text-center"><img src="<?=$pImage; ?>" width="200"></td>
+            <td rowspan="4" class="text-center" width="200">
+
+            <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src='<img src="<?=$pImage; ?>" width="300px">' class="d-block w-100" alt="product image">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</td>
+
            </tr>
            <tr>
             <th>product price:</th>
@@ -50,11 +79,11 @@ else{
            </tr>
            <tr>
             <th>delievery charge:</th>
-            <td>>N<?=number_format($del_charge); ?></td>
+            <td>N<?=number_format($del_charge); ?></td>
            </tr>
            <tr>
             <th>total price:</th>
-            <td>>N<?=number_format($total_price); ?></td>
+            <td>N<?=number_format($total_price); ?></td>
            </tr>
           </table>
           <h4>Enter your details:</h4>
@@ -80,3 +109,4 @@ else{
     
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
